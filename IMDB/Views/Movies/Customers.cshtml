@@ -1,0 +1,20 @@
+﻿@model IMDB.ViewModel.RandomMovie
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+@if (Model.customers.Count == 0)
+{
+    <text>There are no customers currently</text>
+}
+
+else
+{
+    foreach (var customer in Model.customers)
+    {
+        <li>@customer.Name</li>
+    }
+}

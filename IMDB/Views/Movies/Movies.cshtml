@@ -1,0 +1,16 @@
+﻿@model IMDB.ViewModel.RandomMovie
+@{
+    ViewBag.Title = "Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Movies.Name</h2>
+
+
+
+
+@foreach (var customer in Model.customers)
+{
+    <h2>@customer.Name</h2>        
+}
+
